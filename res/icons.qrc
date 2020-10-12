@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/Application">
+        <file>../icons/open_volume.png</file>
+        <file>../icons/LH.png</file>
+        <file>../icons/kmeans.png</file>
+        <file>../icons/save.png</file>
+    </qresource>
+</RCC>

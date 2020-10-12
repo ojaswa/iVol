@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>538</width>
+    <height>392</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>32</width>
+    <height>32</height>
+   </size>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QVTKWidget" name="qvtkWidget" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>538</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_Open"/>
+    <addaction name="separator"/>
+    <addaction name="action_Quit"/>
+   </widget>
+   <widget class="QMenu" name="menuProcessing">
+    <property name="title">
+     <string>Processing</string>
+    </property>
+    <addaction name="actionCompute_LH"/>
+    <addaction name="actionSave_LH"/>
+    <addaction name="actionK_means"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menuProcessing"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Open"/>
+   <addaction name="separator"/>
+   <addaction name="actionCompute_LH"/>
+   <addaction name="actionK_means"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Open">
+   <property name="icon">
+    <iconset resource="../../res/icons.qrc">
+     <normaloff>:/Application/icons/open_volume.png</normaloff>:/Application/icons/open_volume.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open volume</string>
+   </property>
+   <property name="toolTip">
+    <string>Open volume data</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionCompute_LH">
+   <property name="icon">
+    <iconset resource="../../res/icons.qrc">
+     <normaloff>:/Application/icons/LH.png</normaloff>:/Application/icons/LH.png</iconset>
+   </property>
+   <property name="text">
+    <string>Compute LH</string>
+   </property>
+   <property name="toolTip">
+    <string>Compute LH histogram</string>
+   </property>
+  </action>
+  <action name="actionSave_LH">
+   <property name="icon">
+    <iconset resource="../../res/icons.qrc">
+     <normaloff>:/Application/icons/save.png</normaloff>:/Application/icons/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save LH</string>
+   </property>
+   <property name="toolTip">
+    <string>Save LH data</string>
+   </property>
+  </action>
+  <action name="actionK_means">
+   <property name="icon">
+    <iconset resource="../../res/icons.qrc">
+     <normaloff>:/Application/icons/kmeans.png</normaloff>:/Application/icons/kmeans.png</iconset>
+   </property>
+   <property name="text">
+    <string>K-means clustering</string>
+   </property>
+   <property name="toolTip">
+    <string>Perform K-means clustering</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../res/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
