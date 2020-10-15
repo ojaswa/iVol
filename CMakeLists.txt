@@ -25,18 +25,22 @@ set(SOURCES
 	"src/main.cpp"
 	"src/ui/mainwindow.cpp"
 	"src/algorithm/volumemanager.cpp"
-    "src/ui/transferfunctionwindow.cpp"
+    	"src/ui/transferfunctionwindow.cpp"
 	)
 set(HEADERS 
 	"src/ui/mainwindow.h"
 	"src/algorithm/volumemanager.h"
-    "src/ui/transferfunctionwindow.h"
-    "src/osxhelper.h"
+    	"src/ui/transferfunctionwindow.h"
+if(APPLE)	
+    	"src/osxhelper.h"
+endif()	
 	)
 set(UI_SOURCES
 	"src/ui/mainwindow.ui"
-    "src/ui/transferfunctionwindow.ui"
-    "src/osxhelper.mm"
+    	"src/ui/transferfunctionwindow.ui"
+if(APPLE)	
+    	"src/osxhelper.mm"
+endif()	
 	)
 set(RESOURCES
 	"res/icons.qrc"
