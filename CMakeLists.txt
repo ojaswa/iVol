@@ -31,17 +31,19 @@ set(HEADERS
 	"src/ui/mainwindow.h"
 	"src/algorithm/volumemanager.h"
     	"src/ui/transferfunctionwindow.h"
-if(APPLE)	
-    	"src/osxhelper.h"
-endif()	
 	)
+if(APPLE)	
+    	list(APPEND HEADERS "src/osxhelper.h")
+endif()	
+	
 set(UI_SOURCES
 	"src/ui/mainwindow.ui"
     	"src/ui/transferfunctionwindow.ui"
-if(APPLE)	
-    	"src/osxhelper.mm"
-endif()	
 	)
+if(APPLE)	
+    	list(APPEND "src/osxhelper.mm")
+endif()	
+	
 set(RESOURCES
 	"res/icons.qrc"
 	)
